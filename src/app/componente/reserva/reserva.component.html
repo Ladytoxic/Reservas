@@ -1,0 +1,26 @@
+<div class="alert alert-warning alert-dismissible fade show text-center " role="alert">
+    <strong>Este evento tiene capacidad localides limitada</strong>
+  </div>
+<div class="container text-center rounded shadow-lg">
+    <img src="./assets/logo.png" alt="Logo de la Terraza">
+    <div class="caja">
+        <h1>{{title}}</h1>
+        <p>{{fecha}}</p>
+        <p>{{descripcion}}</p>
+    </div>
+    <p class="h5">Reserva tu entrada</p>
+    <form class="form" (ngSubmit)="enviar()" [formGroup]="formReserva">
+        <input class="form-control" type="text" formControlName="name" placeholder="Nombre">
+        <input class="form-control" type="text" formControlName="email" placeholder="Ingrese su Email">
+        <Label>¿Cuanto lugares deseas reservar?</Label>
+        <select class="form-select" formControlName="cantidad" aria-label="Default select example">
+            <option selected >1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+        <button class="btn btn-primary border border-primary border-2" type="submit" [disabled]="formReserva.invalid">Reservar</button>
+    </form>
+    <div class="alert alert-danger" *ngIf="formReserva.get('name')?.touched && formReserva.get('name')?.errors?.['required']"><p>Falta ingresar un nombre</p></div>
+    <div class="alert alert-danger" *ngIf="formReserva.get('email')?.touched && formReserva.get('email')?.errors?.['required'] && formReserva.get('email')?.errors"><p>El email no es valido</p></div>
+</div>

@@ -1,0 +1,8 @@
+/* titulo */
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+/* descripcion */
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+body {
+    background-color: rgba(253, 122, 0, 0.911);
+    font-size: 1.05em;
+}
