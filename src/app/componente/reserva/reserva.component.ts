@@ -12,7 +12,7 @@ import { __values } from 'tslib';
 })
 export class ReservaComponent implements OnInit {
   title = 'TEATRO ÍNTIMO';
-  descripcion = "Inserte descripción de la función";
+  descripcion = "Tres escenas comprometidas para un público reducido, donde lxs espectadores rodean el escenario para ser testigos directos y poder sentirse a solas con les personajes, viviendo el teatro a flor de piel.";
   fecha = "Domingo 11 de Septiembre 18hs.";
   formReserva!: FormGroup;
 

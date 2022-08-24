@@ -1,12 +1,12 @@
 <div class="alert alert-warning alert-dismissible fade show text-center " role="alert">
-    <strong>Este evento tiene capacidad localides limitada</strong>
+    <strong>Este evento tiene localidas limitada</strong>
   </div>
 <div class="container text-center rounded shadow-lg">
     <img src="./assets/logo.png" alt="Logo de la Terraza">
     <div class="caja">
         <h1>{{title}}</h1>
-        <p>{{fecha}}</p>
         <p>{{descripcion}}</p>
+        <p>{{fecha}}</p>
     </div>
     <p class="h5">Reserva tu entrada</p>
     <form class="form" (ngSubmit)="enviar()" [formGroup]="formReserva">
