@@ -1,0 +1,21 @@
+<div class="container bg-body">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Email</th>
+            <th scope="col" class="text-end">Cantidad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let Reservas of reservasList">
+            <th scope="row">{{Reservas.id}}</th>
+            <td>{{Reservas.nombre}}</td>
+            <td>{{Reservas.email}}</td>
+            <td class="text-end">{{Reservas.cantidad}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+</div>

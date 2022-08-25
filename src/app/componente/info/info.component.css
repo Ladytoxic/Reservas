@@ -1,0 +1,30 @@
+.container {
+    display: block;
+    margin: auto;
+    margin-top: 1.5em;
+    margin-bottom: 3em;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: rgba(255, 255, 255, 0.733);
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+}
+
+* {
+    font-family: 'Special Elite', cursive;
+    ;
+}
+
+h1 {
+    font-family: 'Fredericka the Great', cursive;
+
+}
+
+img {
+    margin-bottom: 1em;
+}

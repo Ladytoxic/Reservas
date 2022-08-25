@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ErrorHandler, OnInit } from '@angular/core';
 import { FormGroup, Validators } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AlertaService } from 'src/app/servicio/alerta.service';
 import { ReservaService } from 'src/app/servicio/reserva.service';
-import { __values } from 'tslib';
 
 @Component({
   selector: 'app-reserva',
@@ -17,19 +18,22 @@ export class ReservaComponent implements OnInit {
   formReserva!: FormGroup;
 
   constructor(private FormBuilder: FormBuilder,
-    private reservar: ReservaService) { }
+    private reservar: ReservaService, private alerta: AlertaService, private ruta:Router) { }
 
   ngOnInit(): void {
     this.formReserva = this.FormBuilder.group({
-      name: ['', Validators.required],
+      nombre: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      cantidad: ['1']});
-
-
+      cantidad: ['1']
+    });
   }
   enviar(): void {
-    this.reservar
-    console.log(this.formReserva.value);
+    this.reservar.hacerReserva(this.formReserva.value).subscribe(data => {
+        this.alerta.correct(
+          'Todo salio bien', '¡RESERVA REALIZADA!')
+          this.ruta.navigateByUrl('end');
+        console.log(data)
+    })
   }
 
 }
