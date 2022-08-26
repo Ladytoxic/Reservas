@@ -1,21 +1,30 @@
 <div class="container bg-body">
-    <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">#Id</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Email</th>
-            <th scope="col" class="text-end">Cantidad</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let Reservas of reservasList">
-            <th scope="row">{{Reservas.id}}</th>
-            <td>{{Reservas.nombre}}</td>
-            <td>{{Reservas.email}}</td>
-            <td class="text-end">{{Reservas.cantidad}}</td>
-          </tr>
-        </tbody>
-      </table>
-
+  <div class="container">
+    <h2>RESERVAS</h2>
+    <h1>{{titulo}}</h1>
+    <p>{{fecha}}</p>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">N°</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Email</th>
+        <th scope="col" class="text-end">Cantidad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let Reservas of reservasList">
+        <th scope="row">#{{Reservas.id}}</th>
+        <td>{{Reservas.nombre}}</td>
+        <td>{{Reservas.email}}</td>
+        <td class="text-end"><b>{{Reservas.cantidad}}</b></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="pieTabla">
+    <p>Total cantidad de Entradas:</p>
+    <p>{{cantidad}}</p>
+  </div>
+  
 </div>

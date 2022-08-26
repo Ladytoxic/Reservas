@@ -1,0 +1,14 @@
+tbody, thead {
+    text-align: start;
+    font-size: 0.90rem;
+}
+
+.pieTabla {
+    display: flex;
+    text-align: end;
+    justify-content: end;
+    background-color: rgb(139, 139, 139);
+}
+.pieTabla p {
+ padding: 1em;
+}
