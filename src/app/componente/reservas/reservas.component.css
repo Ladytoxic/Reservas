@@ -8,7 +8,6 @@ tbody, thead {
     text-align: end;
     justify-content: end;
     background-color: rgb(139, 139, 139);
-}
-.pieTabla p {
- padding: 1em;
+    gap: 1em;
+    padding: 1em;
 }

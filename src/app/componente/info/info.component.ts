@@ -23,7 +23,7 @@ export class InfoComponent implements OnInit {
       this.Lista = data;
       this.reserva =this.Lista[0]
       this.id = this.reserva.id
-      console.log(this.id);       
+      console.log(this.id);
     })
   }
 }

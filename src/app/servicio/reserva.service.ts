@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
-import { TrackHttpError } from '../model/TrackHttpError';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
@@ -23,26 +22,9 @@ export class ReservaService {
   }
   // public obternerReservas(): Observable<any> {
   //   return this.http.get(this.Local)
-  //     .pipe(catchError(this.errorHandler))
   // }
   // public hacerReserva(reserva: any): Observable<any> {
   //   return this.http.post<any>(this.Local2, reserva)
-  //     .pipe(catchError(this.errorHandler));
+
   // }
-  // errorHandler(error: HttpErrorResponse) {
-  //   return throwError(error.message)
-
-  // };
-
-  private handeleHttpError(
-    error: HttpErrorResponse
-  ): Observable<TrackHttpError> {
-    let dataError = new TrackHttpError();
-    dataError.errorNumber = error.status;
-    dataError.message = error.statusText;
-    dataError.amigable = 'Todo salio mal'
-    return throwError(dataError)
-
-  }
-
 }

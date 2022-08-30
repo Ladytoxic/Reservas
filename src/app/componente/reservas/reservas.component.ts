@@ -9,13 +9,21 @@ import { ReservaService } from 'src/app/servicio/reserva.service';
 export class ReservasComponent implements OnInit {
   titulo = "Teatro íntimo"
   fecha = "11 de Septiembre - 18hs."
-  reservasList:any[] = [] ;
-  cantidad = '0';
+  reservasList: any[] = [];
+  reservastotal: any;
+
   constructor(private reserva: ReservaService) { }
   ngOnInit(): void {
-    this.reserva.obternerReservas().subscribe((data : any )=>  {
+    this.reserva.obternerReservas().subscribe((data: any) => {
       this.reservasList = data;
-      console.log('cantidad')
+      const resp = this.reservasList.map(reservasList => reservasList.cantidad).reduce((prev, curr) => prev + curr, 0);
+      this.reservastotal = resp
     })
+
+
+
+
   }
+
+
 }
