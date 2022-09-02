@@ -24,8 +24,7 @@ export class ReservaComponent implements OnInit {
 
   ngOnInit(): void {
     // this.reservar.obternerReservas().subscribe((resp : any )=>{
-    //   console.log(resp)
-    // })
+    //  })
     this.formReserva = this.FormBuilder.group({
       nombre: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -38,8 +37,9 @@ export class ReservaComponent implements OnInit {
           'Todo salio bien', '¡RESERVA REALIZADA!')
           this.ruta.navigateByUrl('end')
           console.log(data)
-          // error => this.errorMensaje = error;
         })
+        // err => this.errorMensaje = err;
+        // this.alerta.incorrect ('Algo salio mal', "¡ERROR!")
   }
 
 }
