@@ -32,11 +32,10 @@ export class ReservaComponent implements OnInit {
   enviar(): void {
     this.reservar.hacerReserva(this.formReserva.value).subscribe(
       data => {
-        return this.alerta.correct(
-          'Todo salio bien', '¡RESERVA REALIZADA!')
+        this.alerta.correct('Todo salio bien', '¡RESERVA REALIZADA!')
         this.ruta.navigate(['end'], { queryParams: { resp: 'reserva' } })
         console.log(data.id)
-      },
+      }
       // err => {
       //   return this.alerta.incorrect('Vuelva a intentar', "¡RESERVA NO REALIZADA!")
       //   console.log('Ocurrio un error', err)
