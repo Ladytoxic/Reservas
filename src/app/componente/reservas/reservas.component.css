@@ -5,9 +5,25 @@ tbody, thead {
 
 .pieTabla {
     display: flex;
-    text-align: end;
-    justify-content: end;
-    background-color: rgb(139, 139, 139);
+    text-align: center;
     gap: 1em;
     padding: 1em;
+}
+
+.container {
+    text-align: start;
+    list-style: none;
+    gap: 1em;
+}
+
+.card {
+    padding: 1em;
+}
+.card-group {
+    gap: 1em;
+    
+}
+
+img {
+    width: 100px;
 }

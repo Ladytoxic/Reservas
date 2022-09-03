@@ -1,8 +1,8 @@
 <app-gifcarg></app-gifcarg>
-<div class="alert alert-warning text-center" role="alert">
-    <strong>Este evento tiene localidades limitadas</strong>
-</div>
 <div class="container text-center rounded shadow-lg">
+    <div class="alert alert-warning text-center" role="alert">
+        <strong>Este evento tiene localidades limitadas</strong>
+    </div>
     <img src="./assets/logo.png" alt="Logo de la Terraza">
     <div class="caja">
         <h1>{{title}}</h1>
@@ -32,5 +32,6 @@
         <button class="btn btn-primary border border-primary border-2" type="submit"
             [disabled]="formReserva.invalid">Reservar</button>
     </form>
-
+ 
 </div>
+<app-footer></app-footer>

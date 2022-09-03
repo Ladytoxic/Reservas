@@ -9,7 +9,8 @@ const routes: Routes = [
   { path: 'end', component: InfoComponent },
   { path: 'teatrointimo/reservas', component: ReservasComponent },
   { path: 'teatrointimo', component: ReservaComponent },
-  { path: '', redirectTo: 'teatrointimo', pathMatch: 'full' }
+  { path: '', redirectTo: 'teatrointimo', pathMatch: 'full' },
+  {path: '**', component: ReservaComponent}
 ];
 
 

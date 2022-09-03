@@ -1,0 +1,9 @@
+footer {
+    height: auto;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 27, 0.842);
+}

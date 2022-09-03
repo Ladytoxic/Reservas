@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ReservaService {
-  UrlReservar = 'https://laterrazareservas.herokuapp.com/reservar';
+  UrlReservar = 'https://laterrazareservas.herokuapp.com/reservar'
   UrlReservas = 'https://laterrazareservas.herokuapp.com/reservas'
   Local = 'http://localhost:8080/reservas'
   Local2 = 'http://localhost:8080/reservar'

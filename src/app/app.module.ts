@@ -13,6 +13,8 @@ import { InfoComponent } from './componente/info/info.component';
 import { FiltroPipe } from './pipe/filtro.pipe';
 import { GifcargComponent } from './CARGO/gifcarg/gifcarg.component';
 import { InterceptorInterceptor } from './CARGO/gifcarg/interceptor.interceptor';
+import { PersonaComponent } from './componente/reservas/persona/persona.component';
+import { FooterComponent } from './componente/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { InterceptorInterceptor } from './CARGO/gifcarg/interceptor.interceptor'
     InfoComponent,
     FiltroPipe,
     GifcargComponent,
+    PersonaComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
