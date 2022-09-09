@@ -18,8 +18,8 @@ export class ReservaComponent implements OnInit {
   descripcion = "Tres escenas comprometidas para un público reducido, donde lxs espectadores rodean el escenario para ser testigos directos y poder sentirse a solas con les personajes, viviendo el teatro a flor de piel.";
   fecha = "Domingo 11 de Septiembre a las 18 hs.";
   formReserva!: FormGroup;
-  dataMail: any;
   serveMail = 'https://mailreservas.herokuapp.com/envio'
+
 
   constructor(private FormBuilder: FormBuilder,
     private reservar: ReservaService, private alerta: AlertaService, private ruta: Router,
@@ -39,20 +39,29 @@ export class ReservaComponent implements OnInit {
         let param = {
           email: this.formReserva.value.email,
           asunto: 'Hola ' + this.formReserva.value.nombre + '! "Tu Reserva ha sido realiza Correctamente"',
-          mensaje:'Te esperamos el ' + this.fecha + ' En Centro cultural La Terraza ( Av. Aviación 690 1er Piso - Longchamps)'
+          html: `
+          <div> 
+          <h1>Hola 👋 ${this.formReserva.value.nombre}!</h1>
+          <h3>Tu reserva ha sido realizada correctamente</h3>
+          <p>Te esperamos el día ${this.fecha}</p>
+          <p><b>En el Centro cultural La Terraza</b></p>
+          <p>(Av. Aviación 690 1er piso - Longchamps)</p>
+          </div> 
+          `
         }
         this.ruta.navigate(['end'], { queryParams: { resp: 'Reserva' } });
         this.http.post('https://mailreservas.herokuapp.com/envio', param).subscribe(resp => {
           console.log(resp);
-        })
-
-      }
-      // err => {
-      //   return this.alerta.incorrect('Vuelva a intentar', "¡RESERVA NO REALIZADA!")
-      //   console.log('Ocurrio un error', err)
-      // },
-      // () => {console.log('Función Terminada')}
-    );
+        });
+        // this.http.post('http://localhost:3000/envio', param).subscribe(resp => {
+        //   console.log(resp);
+        // });
+      });
   }
-
 }
+
+// (err) => {
+//   return this.alerta.incorrect('Vuelva a intentar', "¡RESERVA NO REALIZADA!")
+//   console.log('Ocurrio un error', err)
+// },
+//   () => { console.log('Función Terminada') }
