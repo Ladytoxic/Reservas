@@ -15,6 +15,7 @@ import { GifcargComponent } from './CARGO/gifcarg/gifcarg.component';
 import { InterceptorInterceptor } from './CARGO/gifcarg/interceptor.interceptor';
 import { PersonaComponent } from './componente/reservas/persona/persona.component';
 import { FooterComponent } from './componente/footer/footer.component';
+import { AgotadasComponent } from './componente/agotadas/agotadas.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { FooterComponent } from './componente/footer/footer.component';
     GifcargComponent,
     PersonaComponent,
     FooterComponent,
+    AgotadasComponent,
   ],
   imports: [
     BrowserModule,

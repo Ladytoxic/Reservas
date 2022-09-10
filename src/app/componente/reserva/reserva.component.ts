@@ -20,7 +20,6 @@ export class ReservaComponent implements OnInit {
   formReserva!: FormGroup;
   serveMail = 'https://mailreservas.herokuapp.com/envio'
 
-
   constructor(private FormBuilder: FormBuilder,
     private reservar: ReservaService, private alerta: AlertaService, private ruta: Router,
     private http: HttpClient) { }

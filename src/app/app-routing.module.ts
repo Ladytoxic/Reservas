@@ -4,11 +4,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { ReservaComponent } from './componente/reserva/reserva.component';
 import { ReservasComponent } from './componente/reservas/reservas.component';
 import { InfoComponent } from './componente/info/info.component';
+import { AgotadasComponent } from './componente/agotadas/agotadas.component';
 
 const routes: Routes = [
   { path: 'end', component: InfoComponent },
   { path: 'teatrointimo/reservas', component: ReservasComponent },
-  { path: 'teatrointimo', component: ReservaComponent },
+  { path: 'teatrointimo', component: AgotadasComponent },
   { path: '', redirectTo: 'teatrointimo', pathMatch: 'full' },
   {path: '**', component: ReservaComponent}
 ];
