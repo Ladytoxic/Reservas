@@ -11,11 +11,11 @@ import { GifcargService } from './gifcarg.service';
 @Injectable()
 export class InterceptorInterceptor implements HttpInterceptor {
 
-  constructor(private cargaServ : GifcargService) {}
+  constructor(private cargaServ: GifcargService) { }
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     this.cargaServ.cargando();
     return next.handle(request).pipe(
-    finalize(() => this.cargaServ.cargo()));
+      finalize(() => this.cargaServ.cargo()));
   }
 }

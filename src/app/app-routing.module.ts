@@ -9,7 +9,7 @@ import { AgotadasComponent } from './componente/agotadas/agotadas.component';
 const routes: Routes = [
   { path: 'end', component: InfoComponent },
   { path: 'teatrointimo/reservas', component: ReservasComponent },
-  { path: 'teatrointimo', component: AgotadasComponent },
+  { path: 'teatrointimo', component: ReservaComponent },
   { path: '', redirectTo: 'teatrointimo', pathMatch: 'full' },
   {path: '**', component: ReservaComponent}
 ];

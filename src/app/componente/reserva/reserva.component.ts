@@ -49,9 +49,9 @@ export class ReservaComponent implements OnInit {
           `
         }
         this.ruta.navigate(['end'], { queryParams: { resp: 'Reserva' } });
-        this.http.post('https://mailreservas.herokuapp.com/envio', param).subscribe(resp => {
-          console.log(resp);
-        });
+        // this.http.post('https://mailreservas.herokuapp.com/envio', param).subscribe(resp => {
+        //   console.log(resp);
+        // });
         // this.http.post('http://localhost:3000/envio', param).subscribe(resp => {
         //   console.log(resp);
         // });
